@@ -1,0 +1,48 @@
+{
+  "name": "fa6ian/crafty",
+  "description": "A starter Craft installation from livestream with Andrew Welch.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fabian Socarras",
+      "email": "fabian@fabiansocarras.com",
+      "homepage": "https://www.fabiansocarras.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.4.0",
+    "craftcms/feed-me": "^4.2.2",
+    "vlucas/phpdotenv": "^3.4.0",
+    "craftcms/mailgun": "^1.4.2",
+    "craftcms/redactor": "^2.6.1",
+    "fortrabbit/craft-copy": "^1.0.0-RC10",
+    "studioespresso/craft-dumper": "^2.0.0",
+    "skayocrafts/sidebar-shortcuts": "^1.0.0",
+    "verbb/super-table": "^2.4.9",
+    "nystudio107/craft-typogrify": "^1.1.1",
+    "nystudio107/craft-twigpack": "^1.2.0",
+    "ostark/craft-async-queue": "^2.1.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}
